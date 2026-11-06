@@ -1,0 +1,93 @@
+:root {
+  --font-primary: 'Inter', sans-serif;
+
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+
+  --spacing-4: 4px;
+  --spacing-8: 8px;
+  --spacing-12: 12px;
+  --spacing-16: 16px;
+  --spacing-24: 24px;
+  --spacing-32: 32px;
+  --spacing-48: 48px;
+  --spacing-64: 64px;
+  --spacing-120: 120px;
+
+  --radius-8: 8px;
+  --radius-10: 10px;
+  --radius-16: 16px;
+  --radius-24: 24px;
+
+  --color-primary: #2563EB;
+  --color-primary-hover: #1D4ED8;
+  --color-blue-50: #EFF6FF;
+  --color-navy-900: #0F172A;
+  --color-cyan: #06B6D4;
+  --color-cyan-dark: #0E7490;
+
+  --color-background: #FFFFFF;
+  --color-background-alt: #F8FAFC;
+
+  --color-text: #1E293B;
+  --color-text-secondary: #64748B;
+  
+  --bs-primary: var(--color-primary);
+  --bs-body-bg: var(--color-background);
+  
+  --bs-body-color: var(--color-text);
+  --bs-secondary-color: var(--color-text-secondary);
+  --bs-link-color: var(--color-primary);
+  --bs-link-hover-color: var(--color-primary-hover);
+
+  --bs-body-font-family: var(--font-primary);
+  --bs-body-font-weight: var(--font-regular);
+
+  --bs-border-radius-sm: var(--radius-8);
+  --bs-border-radius: var(--radius-10);
+  --bs-border-radius-lg: var(--radius-16);
+  --bs-border-radius-xl: var(--radius-24);
+
+}
+
+body {
+  line-height: 1.6;
+}
+
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--color-primary-hover);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--color-text);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.125rem;
+}
+
+p {
+    color: var(--color-text-secondary);
+}

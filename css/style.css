@@ -27,6 +27,8 @@
   --color-navy-900: #0F172A;
   --color-cyan: #06B6D4;
   --color-cyan-dark: #0E7490;
+	--color-slate-300: #CBD5E1;
+  --color-blue-300: #60A5FA;
 
   --color-background: #FFFFFF;
   --color-background-alt: #F8FAFC;
@@ -36,6 +38,8 @@
   
   --bs-primary: var(--color-primary);
   --bs-body-bg: var(--color-background);
+	--bs-dark: var(--color-navy-900);
+	--bs-dark-rgb: 15, 23, 42;
   
   --bs-body-color: var(--color-text);
   --bs-secondary-color: var(--color-text-secondary);
@@ -91,6 +95,15 @@ h3 {
 p {
   color: var(--color-text-secondary);
 }
+
+footer a, footer p {
+	color: var(--color-slate-300);
+}
+
+footer a:hover, footer a:focus-visible {
+	color: var(--color-blue-300);
+}
+
 
 #mobileMenu .navbar-nav {
   --bs-navbar-active-color: var(--color-primary);

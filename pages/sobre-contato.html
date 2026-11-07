@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet"
+  >
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"
+  >
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+  >
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" href="../images/techeventos-icone.svg" type="image/svg+xml">
+  <title>Sobre e contato · TechEventos</title>
+</head>
+<body>
+  <header class="m-2">
+    <nav class="navbar navbar-expand-md">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html">
+          <img src="../images/techeventos-icone.svg" alt="Logomarca Tech Eventos" width="32" height="32">
+          <span class="fw-bold">TechEventos</span>
+        </a>
+
+        <button class="navbar-toggler me-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div id="mobileMenu" class="offcanvas-md offcanvas-end" style="--bs-offcanvas-width: 322px;">
+          <div class="offcanvas-header border-bottom">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html">
+              <img src="../images/techeventos-icone.svg" alt="Logomarca Tech Eventos">
+              <span class="fw-bold" id="mobileMenuLabel">TechEventos</span>
+            </a>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#mobileMenu" aria-label="Fechar menu"></button>
+          </div>
+
+          <div class="offcanvas-body d-flex flex-column">
+            <ul class="navbar-nav mx-lg-auto gap-md-3">
+              <li class="nav-item border-bottom py-2">
+                <a href="../index.html" class="nav-link d-flex justify-content-between align-items-center">
+                  Início
+                  <i class="bi bi-chevron-right d-md-none text-secondary" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li class="nav-item border-bottom py-2">
+                <a href="./eventos.html" class="nav-link d-flex justify-content-between align-items-center">
+                  Eventos
+                  <i class="bi bi-chevron-right d-md-none text-secondary" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li class="nav-item border-bottom py-2">
+                <a href="./sobre-contato.html" class="nav-link d-flex justify-content-between align-items-center active" aria-current="page">
+                  Sobre
+                  <i class="bi bi-chevron-right d-md-none text-secondary" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li class="nav-item border-bottom py-2">
+                <a href="./sobre-contato.html#contato" class="nav-link d-flex justify-content-between align-items-center">
+                  Contato
+                  <i class="bi bi-chevron-right d-md-none text-secondary" aria-hidden="true"></i>
+                </a>
+              </li>
+            </ul>
+
+            <div class="mt-auto d-md-none">
+              <p class="small fw-medium">Organiza um evento de tecnologia?</p>
+              <a class="btn btn-primary w-100" href="./sobre-contato.html#contato">
+                <i class="bi bi-megaphone me-2" aria-hidden="true"></i>
+                Divulgar evento
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <a class="btn btn-primary d-none d-lg-inline-flex" href="./sobre-contato.html#contato">
+          <i class="bi bi-megaphone me-2" aria-hidden="true"></i>
+          Divulgar evento
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section id="sobre"></section>
+    <section id="contato"></section>
+  </main>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"
+  ></script>
+</body>
+</html>

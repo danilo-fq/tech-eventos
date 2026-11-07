@@ -1,5 +1,5 @@
 :root {
-  --font-primary: 'Inter', sans-serif;
+	--font-primary: 'Inter', sans-serif;
 
   --font-regular: 400;
   --font-medium: 500;
@@ -57,12 +57,12 @@ body {
 }
 
 a {
-    color: var(--color-primary);
-    text-decoration: none;
+  color: var(--color-primary);
+  text-decoration: none;
 }
 
 a:hover {
-    color: var(--color-primary-hover);
+  color: var(--color-primary-hover);
 }
 
 h1,
@@ -71,23 +71,38 @@ h3,
 h4,
 h5,
 h6 {
-    color: var(--color-text);
-    font-weight: var(--font-weight-medium);
-    line-height: 1.2;
+  color: var(--color-text);
+  font-weight: var(--font-medium);
+  line-height: 1.2;
 }
 
 h1 {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 h2 {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 h3 {
-    font-size: 1.125rem;
+  font-size: 1.125rem;
 }
 
 p {
-    color: var(--color-text-secondary);
+  color: var(--color-text-secondary);
+}
+
+#mobileMenu .navbar-nav {
+  --bs-navbar-active-color: var(--color-primary);
+}
+
+#mobileMenu > .offcanvas-body > .navbar-nav > .nav-item > .nav-link {
+	font-size: 1.25rem;
+	font-weight: var(--font-semibold);
+}
+
+@media (min-width: 768px) {
+	#mobileMenu > .offcanvas-body > .navbar-nav > .nav-item {
+    border-bottom: 0 !important;
+  }
 }

@@ -38,7 +38,7 @@
         <div id="mobileMenu" class="offcanvas-md offcanvas-end" style="--bs-offcanvas-width: 322px;">
           <div class="offcanvas-header border-bottom">
             <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html">
-              <img src="../images/techeventos-icone.svg" alt="Logomarca Tech Eventos">
+              <img src="../images/techeventos-icone.svg" alt="Logomarca Tech Eventos" width="32" height="32">
               <span class="fw-bold" id="mobileMenuLabel">TechEventos</span>
             </a>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#mobileMenu" aria-label="Fechar menu"></button>
@@ -90,8 +90,200 @@
     </nav>
   </header>
 
-  <main class="container">
-    <section id="sobre"></section>
+  <main>
+    <!--
+      Seção: Sobre
+      Autor: Renan Santos
+    -->
+
+    <section id="sobre" class="py-5">
+      <div class="container py-lg-5">
+        <div class="row">
+          <div class="col-lg-8">
+            <span class="d-inline-block mb-3 text-primary text-uppercase small fw-semibold">— Sobre o TechEventos</span>
+            <h1 class="display-4 fw-semibold mb-3">Conectamos você aos eventos que movem a tecnologia.</h1>
+            <p class="fs-5 text-secondary mb-4">
+              O TechEventos reúne em um só lugar eventos de tecnologia que hoje estão
+              espalhados por sites, redes sociais e plataformas diferentes.
+            </p>
+            <ul class="list-unstyled d-flex flex-wrap gap-4 gap-md-5 mb-0">
+              <li>
+                <strong class="d-block fs-2 fw-bold lh-1">120+</strong>
+                <span class="small text-secondary">eventos</span>
+              </li>
+              <li>
+                <strong class="d-block fs-2 fw-bold lh-1">6</strong>
+                <span class="small text-secondary">categorias</span>
+              </li>
+              <li>
+                <strong class="d-block fs-2 fw-bold lh-1">3</strong>
+                <span class="small text-secondary">modalidades</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5 bg-body-tertiary">
+      <div class="container py-lg-5">
+        <div class="row g-4 g-lg-5 align-items-center">
+          <div class="col-lg-6">
+            <span class="d-inline-block mb-3 text-primary text-uppercase small fw-semibold">— O problema</span>
+            <h2 class="fs-2 fw-semibold mb-3">Informação demais,<br> em lugares demais.</h2>
+            <p class="text-secondary">
+              Congressos, workshops e meetups são divulgados em canais diferentes:
+              perfis em redes sociais, sites de universidades, grupos de mensagem
+              e plataformas de ingresso.
+            </p>
+            <p class="text-secondary mb-0">
+              Quem procura precisa consultar várias fontes e acaba perdendo prazos
+              de inscrição e oportunidades de aprendizado.
+            </p>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="d-flex flex-column flex-sm-row align-items-center gap-3 p-4 bg-white border rounded-4">
+              <ul class="list-unstyled d-flex flex-column gap-2 mb-0 w-100">
+                <li class="d-flex align-items-center gap-2 px-3 py-2 border rounded-3 small">
+                  <i class="bi bi-share text-secondary" aria-hidden="true"></i> Redes sociais
+                </li>
+                <li class="d-flex align-items-center gap-2 px-3 py-2 border rounded-3 small">
+                  <i class="bi bi-mortarboard text-secondary" aria-hidden="true"></i> Sites de universidades
+                </li>
+                <li class="d-flex align-items-center gap-2 px-3 py-2 border rounded-3 small">
+                  <i class="bi bi-chat-dots text-secondary" aria-hidden="true"></i> Grupos de mensagem
+                </li>
+                <li class="d-flex align-items-center gap-2 px-3 py-2 border rounded-3 small">
+                  <i class="bi bi-ticket-perforated text-secondary" aria-hidden="true"></i> Plataformas de ingresso
+                </li>
+                <li class="d-flex align-items-center gap-2 px-3 py-2 border rounded-3 small">
+                  <i class="bi bi-envelope text-secondary" aria-hidden="true"></i> Newsletters e e-mails
+                </li>
+              </ul>
+
+              <i class="bi bi-arrow-down d-sm-none text-primary fs-4" aria-hidden="true"></i>
+              <i class="bi bi-arrow-right d-none d-sm-block text-primary fs-4" aria-hidden="true"></i>
+
+              <div class="w-100 p-4 text-bg-dark rounded-4">
+                <div class="d-flex align-items-center gap-2 mb-3">
+                  <img src="../images/techeventos-icone.svg" alt="" width="28" height="28">
+                  <span class="fw-bold">TechEventos</span>
+                </div>
+                <ul class="list-unstyled d-flex flex-column gap-2 mb-0 small">
+                  <li><i class="bi bi-check2 me-2 text-info" aria-hidden="true"></i>Um catálogo único</li>
+                  <li><i class="bi bi-check2 me-2 text-info" aria-hidden="true"></i>Busca e filtros</li>
+                  <li><i class="bi bi-check2 me-2 text-info" aria-hidden="true"></i>Link oficial de inscrição</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5">
+      <div class="container py-lg-5">
+        <span class="d-inline-block mb-3 text-primary text-uppercase small fw-semibold">— Objetivo</span>
+        <h2 class="fs-2 fw-semibold mb-4">O que o TechEventos faz</h2>
+
+        <div class="row g-3">
+          <div class="col-md-4">
+            <article class="card h-100 rounded-4">
+              <div class="card-body p-4">
+                <span class="d-inline-flex p-2 lh-1 fs-5 rounded-3 bg-primary-subtle text-primary">
+                  <i class="bi bi-grid" aria-hidden="true"></i>
+                </span>
+                <h3 class="card-title fs-6 fw-semibold mt-3 mb-2">Centraliza</h3>
+                <p class="card-text small text-secondary mb-0">Reúne eventos de tecnologia em um catálogo único e fácil de consultar.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-4">
+            <article class="card h-100 rounded-4">
+              <div class="card-body p-4">
+                <span class="d-inline-flex p-2 lh-1 fs-5 rounded-3 bg-primary-subtle text-primary">
+                  <i class="bi bi-search" aria-hidden="true"></i>
+                </span>
+                <h3 class="card-title fs-6 fw-semibold mt-3 mb-2">Facilita a descoberta</h3>
+                <p class="card-text small text-secondary mb-0">Busca por tema, filtros por categoria e modalidade e ordenação por data.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-4">
+            <article class="card h-100 rounded-4">
+              <div class="card-body p-4">
+                <span class="d-inline-flex p-2 lh-1 fs-5 rounded-3 bg-primary-subtle text-primary">
+                  <i class="bi bi-megaphone" aria-hidden="true"></i>
+                </span>
+                <h3 class="card-title fs-6 fw-semibold mt-3 mb-2">Dá visibilidade</h3>
+                <p class="card-text small text-secondary mb-0">Ajuda organizadores e comunidades a alcançar o público certo.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5 bg-body-tertiary">
+      <div class="container py-lg-5">
+        <span class="d-inline-block mb-3 text-primary text-uppercase small fw-semibold">— Público-alvo</span>
+        <h2 class="fs-2 fw-semibold mb-4">Para quem é</h2>
+
+        <div class="row g-3">
+          <div class="col-sm-6 col-lg-3">
+            <article class="card h-100 rounded-4">
+              <div class="card-body p-4">
+                <span class="d-inline-flex p-2 lh-1 fs-5 rounded-3 bg-primary-subtle text-primary">
+                  <i class="bi bi-mortarboard" aria-hidden="true"></i>
+                </span>
+                <h3 class="card-title fs-6 fw-semibold mt-3 mb-2">Estudantes</h3>
+                <p class="card-text small text-secondary mb-0">Hackathons, minicursos e eventos acadêmicos para aprender e somar horas complementares.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-sm-6 col-lg-3">
+            <article class="card h-100 rounded-4">
+              <div class="card-body p-4">
+                <span class="d-inline-flex p-2 lh-1 fs-5 rounded-3 bg-primary-subtle text-primary">
+                  <i class="bi bi-easel" aria-hidden="true"></i>
+                </span>
+                <h3 class="card-title fs-6 fw-semibold mt-3 mb-2">Professores</h3>
+                <p class="card-text small text-secondary mb-0">Congressos e seminários para se atualizar e indicar aos alunos.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-sm-6 col-lg-3">
+            <article class="card h-100 rounded-4">
+              <div class="card-body p-4">
+                <span class="d-inline-flex p-2 lh-1 fs-5 rounded-3 bg-primary-subtle text-primary">
+                  <i class="bi bi-code-slash" aria-hidden="true"></i>
+                </span>
+                <h3 class="card-title fs-6 fw-semibold mt-3 mb-2">Desenvolvedores</h3>
+                <p class="card-text small text-secondary mb-0">Workshops e meetups para trocar experiências com a comunidade.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-sm-6 col-lg-3">
+            <article class="card h-100 rounded-4">
+              <div class="card-body p-4">
+                <span class="d-inline-flex p-2 lh-1 fs-5 rounded-3 bg-primary-subtle text-primary">
+                  <i class="bi bi-briefcase" aria-hidden="true"></i>
+                </span>
+                <h3 class="card-title fs-6 fw-semibold mt-3 mb-2">Profissionais de TI</h3>
+                <p class="card-text small text-secondary mb-0">Conferências e palestras sobre carreira, gestão e tendências.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="contato"></section>
   </main>
 

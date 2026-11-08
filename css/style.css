@@ -29,6 +29,7 @@
   --color-cyan-dark: #0E7490;
 	--color-slate-300: #CBD5E1;
   --color-blue-300: #60A5FA;
+  --color-cyan: #06B6D4;
 
   --color-background: #FFFFFF;
   --color-background-alt: #F8FAFC;
@@ -104,7 +105,6 @@ footer a:hover, footer a:focus-visible {
 	color: var(--color-blue-300);
 }
 
-
 #mobileMenu .navbar-nav {
   --bs-navbar-active-color: var(--color-primary);
 }
@@ -118,4 +118,28 @@ footer a:hover, footer a:focus-visible {
 	#mobileMenu > .offcanvas-body > .navbar-nav > .nav-item {
     border-bottom: 0 !important;
   }
+}
+
+main > .index-hero {
+  background-color: #f0f4fb;
+}
+
+main > .index-hero > p > span {
+  color: var(--color-cyan);
+}
+
+main > .index-hero > a {
+  width: 50%;
+}
+
+@media (min-width: 1200px) {
+	main > .index-hero {
+    background-image: url(../images/background_herosection_homepage.png);
+    background-position: center;
+    background-size: cover;
+    padding: 10rem 1rem !important;
+  }
+  main > .index-hero > a {
+  width: auto;
+}
 }

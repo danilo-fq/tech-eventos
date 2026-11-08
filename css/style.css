@@ -124,7 +124,7 @@ main > .index-hero {
   background-color: #f0f4fb;
 }
 
-main > .index-hero > p > span {
+.emerald {
   color: var(--color-cyan);
 }
 

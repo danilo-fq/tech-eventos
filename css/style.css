@@ -27,6 +27,9 @@
   --color-navy-900: #0F172A;
   --color-cyan: #06B6D4;
   --color-cyan-dark: #0E7490;
+	--color-slate-300: #CBD5E1;
+  --color-blue-300: #60A5FA;
+  --color-cyan: #06B6D4;
 
   --color-background: #FFFFFF;
   --color-background-alt: #F8FAFC;
@@ -38,8 +41,13 @@
   --bs-primary-rgb: 37, 99, 235;
   --bs-primary-bg-subtle: var(--color-blue-50);
   --bs-body-bg: var(--color-background);
+<<<<<<< HEAD
   --bs-dark: var(--color-navy-900);
   --bs-dark-rgb: 15, 23, 42;
+=======
+	--bs-dark: var(--color-navy-900);
+	--bs-dark-rgb: 15, 23, 42;
+>>>>>>> bb9197197c70f6d20b9cfed5d821a715a6b48ba5
   
   --bs-body-color: var(--color-text);
   --bs-secondary-color: var(--color-text-secondary);
@@ -96,6 +104,14 @@ p {
   color: var(--color-text-secondary);
 }
 
+footer a, footer p {
+	color: var(--color-slate-300);
+}
+
+footer a:hover, footer a:focus-visible {
+	color: var(--color-blue-300);
+}
+
 #mobileMenu .navbar-nav {
   --bs-navbar-active-color: var(--color-primary);
 }
@@ -109,4 +125,38 @@ p {
 	#mobileMenu > .offcanvas-body > .navbar-nav > .nav-item {
     border-bottom: 0 !important;
   }
+}
+
+main > .index-hero {
+  background-color: #f0f4fb;
+}
+
+.emerald {
+  color: var(--color-cyan);
+}
+
+main > .index-hero > a {
+  width: 50%;
+}
+
+@media (min-width: 1200px) {
+	main > .index-hero {
+    background-image: url(../images/background_herosection_homepage.png);
+    background-position: center;
+    background-size: cover;
+    padding: 10rem 1rem !important;
+  }
+  main > .index-hero > a {
+  width: auto;
+  }
+}
+/* Efeito hover para os cards */
+
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15) !important;
 }

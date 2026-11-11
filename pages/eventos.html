@@ -90,7 +90,294 @@
     </nav>
   </header>
 
-  <main class="container">
+  <main class="container my-5">
+    
+    <div class="row mb-4">
+      <div class="col-12">
+        <h1 class="fw-bold text-navy display-6">Eventos</h1>
+        <p class="text-secondary lead fs-6">Congressos, workshops, palestras, hackathons e meetups de tecnologia, presenciais, online e híbridos.</p>
+      </div>
+    </div>
+
+    <div class="row mb-4 g-3 align-items-center">
+      <div class="col-lg-9 col-md-8">
+        <div class="input-group input-group-lg shadow-sm rounded-pill overflow-hidden border">
+          <span class="input-group-text bg-white border-0 text-muted ps-4"><i class="bi bi-search"></i></span>
+          <input type="text" id="inputBusca" class="form-control border-0 ps-2 shadow-none" placeholder="Buscar por nome, tema ou cidade...">
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <select id="selectOrdenacao" class="form-select form-select-lg shadow-sm border rounded-pill fs-6 text-secondary">
+          <option value="proximos">Mais próximos</option>
+          <option value="recentes">Adicionados recentemente</option>
+          <option value="alfabetica">Ordem alfabética</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="card border-0 shadow-sm rounded-4 p-4 mb-4 bg-white">
+      <div class="mb-3" id="filtroCategorias">
+        <span class="d-block fw-semibold text-secondary small text-uppercase mb-2">Categoria</span>
+        <div class="d-flex flex-wrap gap-2">
+          <button class="btn btn-chip active" data-filter="all"><i class="bi bi-check2 me-1"></i> Todas</button>
+          <button class="btn btn-chip" data-filter="conferencia">Conferências</button>
+          <button class="btn btn-chip" data-filter="workshop">Workshops</button>
+          <button class="btn btn-chip" data-filter="palestra">Palestras</button>
+          <button class="btn btn-chip" data-filter="hackathon">Hackathons</button>
+          <button class="btn btn-chip" data-filter="meetup">Meetups</button>
+          <button class="btn btn-chip" data-filter="academico">Acadêmicos</button>
+        </div>
+      </div>
+      <hr class="text-muted opacity-25">
+      <div id="filtroModalidade">
+        <span class="d-block fw-semibold text-secondary small text-uppercase mb-2">Modalidade</span>
+        <div class="d-flex flex-wrap gap-2">
+          <button class="btn btn-chip-outline active" data-mod="all"><i class="bi bi-check2 me-1"></i> Todas</button>
+          <button class="btn btn-chip-outline" data-mod="presencial">Presencial</button>
+          <button class="btn btn-chip-outline" data-mod="online">Online</button>
+          <button class="btn btn-chip-outline" data-mod="hibrido">Híbrido</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-12">
+        <p class="text-muted small fw-medium" id="contadorResultados">12 eventos · ordenados pela data mais próxima</p>
+      </div>
+    </div>
+
+    <div class="row g-4" id="listaEventos">
+      
+      <div class="col-xl-3 col-lg-4 col-md-6 card-item" data-category="palestra" data-modalidade="online" data-keywords="palestra carreira segurança informação cibersegurança online">
+        <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden card-hover bg-white">
+          <div class="bg-light-blue p-4 text-center position-relative" style="height: 140px; display: flex; align-items: center; justify-content: center;">
+            <span class="badge bg-secondary position-absolute top-0 start-0 m-3 fw-normal">Palestras</span>
+            <span class="text-muted small"><i class="bi bi-image fs-4 d-block mb-1"></i> IMAGEM 16:9</span>
+            <span class="badge bg-success position-absolute top-0 end-0 m-3">Online</span>
+          </div>
+          <div class="card-body d-flex flex-column p-3">
+            <small class="text-muted mb-2"><i class="bi bi-calendar3 me-1"></i> Ter, 18 nov 2026 - 19:00</small>
+            <h6 class="card-title fw-bold text-navy mb-2">Palestra: Carreira em Segurança da Informação</h6>
+            <p class="card-text text-secondary small flex-grow-1 mb-3">Descubra as principais certificações e caminhos para ingressar no mercado.</p>
+            <div class="d-flex align-items-center justify-content-between pt-2 border-top">
+              <span class="small text-muted"><i class="bi bi-globe me-1"></i> Online</span>
+              <a href="detalhes.html" class="link-primary text-decoration-none fw-semibold small">Ver detalhes <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xl-3 col-lg-4 col-md-6 card-item" data-category="workshop" data-modalidade="presencial" data-keywords="workshop minicurso python análise de dados porto alegre rs presencial">
+        <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden card-hover bg-white">
+          <div class="bg-light-blue p-4 text-center position-relative" style="height: 140px; display: flex; align-items: center; justify-content: center;">
+            <span class="badge bg-secondary position-absolute top-0 start-0 m-3 fw-normal">Workshops</span>
+            <span class="text-muted small"><i class="bi bi-image fs-4 d-block mb-1"></i> IMAGEM 16:9</span>
+            <span class="badge bg-azul position-absolute top-0 end-0 m-3">Presencial</span>
+          </div>
+          <div class="card-body d-flex flex-column p-3">
+            <small class="text-muted mb-2"><i class="bi bi-calendar3 me-1"></i> Sáb, 14 nov 2026 - 09:00</small>
+            <h6 class="card-title fw-bold text-navy mb-2">Minicurso de Python para Análise de Dados</h6>
+            <p class="card-text text-secondary small flex-grow-1 mb-3">Introdução prática ao Pandas e NumPy para estudantes e profissionais.</p>
+            <div class="d-flex align-items-center justify-content-between pt-2 border-top">
+              <span class="small text-muted truncate-text"><i class="bi bi-geo-alt me-1"></i> Porto Alegre, RS</span>
+              <a href="detalhes.html" class="btn btn-azul text-white btn-sm px-3 py-1">Ver detalhes <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xl-3 col-lg-4 col-md-6 card-item" data-category="workshop" data-modalidade="presencial" data-keywords="workshop acessibilidade web front-end são paulo sp presencial">
+        <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden card-hover bg-white">
+          <div class="bg-light-blue p-4 text-center position-relative" style="height: 140px; display: flex; align-items: center; justify-content: center;">
+            <span class="badge bg-secondary position-absolute top-0 start-0 m-3 fw-normal">Workshops</span>
+            <span class="text-muted small"><i class="bi bi-image fs-4 d-block mb-1"></i> IMAGEM 16:9</span>
+            <span class="badge bg-azul position-absolute top-0 end-0 m-3">Presencial</span>
+          </div>
+          <div class="card-body d-flex flex-column p-3">
+            <small class="text-muted mb-2"><i class="bi bi-calendar3 me-1"></i> Qua, 18 nov 2026 - 19:00</small>
+            <h6 class="card-title fw-bold text-navy mb-2">Workshop: Acessibilidade na Web na Prática</h6>
+            <p class="card-text text-secondary small flex-grow-1 mb-3">Aprenda a aplicar WCAG 2.1 criando interfaces inclusivas.</p>
+            <div class="d-flex align-items-center justify-content-between pt-2 border-top">
+              <span class="small text-muted"><i class="bi bi-geo-alt me-1"></i> São Paulo, SP</span>
+              <a href="detalhes.html" class="link-primary text-decoration-none fw-semibold small">Ver detalhes <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xl-3 col-lg-4 col-md-6 card-item" data-category="hackathon" data-modalidade="presencial" data-keywords="hackathon cidades inteligentes inovação são paulo sp presencial">
+        <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden card-hover bg-white">
+          <div class="bg-light-blue p-4 text-center position-relative" style="height: 140px; display: flex; align-items: center; justify-content: center;">
+            <span class="badge bg-secondary position-absolute top-0 start-0 m-3 fw-normal">Hackathons</span>
+            <span class="text-muted small"><i class="bi bi-image fs-4 d-block mb-1"></i> IMAGEM 16:9</span>
+            <span class="badge bg-azul position-absolute top-0 end-0 m-3">Presencial</span>
+          </div>
+          <div class="card-body d-flex flex-column p-3">
+            <small class="text-muted mb-2"><i class="bi bi-calendar3 me-1"></i> 20 - 22 nov 2026</small>
+            <h6 class="card-title fw-bold text-navy mb-2">Hackathon Cidades Inteligentes 2026</h6>
+            <p class="card-text text-secondary small flex-grow-1 mb-3">Desenvolva protótipos para desafios reais de mobilidade.</p>
+            <div class="d-flex align-items-center justify-content-between pt-2 border-top">
+              <span class="small text-muted"><i class="bi bi-geo-alt me-1"></i> São Paulo, SP</span>
+              <a href="detalhes.html" class="link-primary text-decoration-none fw-semibold small">Ver detalhes <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xl-3 col-lg-4 col-md-6 card-item" data-category="academico" data-modalidade="presencial" data-keywords="semana acadêmica computação campinas sp presencial">
+        <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden card-hover bg-white">
+          <div class="bg-light-blue p-4 text-center position-relative" style="height: 140px; display: flex; align-items: center; justify-content: center;">
+            <span class="badge bg-secondary position-absolute top-0 start-0 m-3 fw-normal">Acadêmicos</span>
+            <span class="text-muted small"><i class="bi bi-image fs-4 d-block mb-1"></i> IMAGEM 16:9</span>
+            <span class="badge bg-azul position-absolute top-0 end-0 m-3">Presencial</span>
+          </div>
+          <div class="card-body d-flex flex-column p-3">
+            <small class="text-muted mb-2"><i class="bi bi-calendar3 me-1"></i> 23 - 27 nov 2026</small>
+            <h6 class="card-title fw-bold text-navy mb-2">Semana Acadêmica de Computação 2026</h6>
+            <p class="card-text text-secondary small flex-grow-1 mb-3">Palestras magnas e maratonas de programação universitária.</p>
+            <div class="d-flex align-items-center justify-content-between pt-2 border-top">
+              <span class="small text-muted"><i class="bi bi-geo-alt me-1"></i> Campinas, SP</span>
+              <a href="detalhes.html" class="link-primary text-decoration-none fw-semibold small">Ver detalhes <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xl-3 col-lg-4 col-md-6 card-item" data-category="meetup" data-modalidade="presencial" data-keywords="meetup front-end recife pe presencial">
+        <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden card-hover bg-white">
+          <div class="bg-light-blue p-4 text-center position-relative" style="height: 140px; display: flex; align-items: center; justify-content: center;">
+            <span class="badge bg-secondary position-absolute top-0 start-0 m-3 fw-normal">Meetups</span>
+            <span class="text-muted small"><i class="bi bi-image fs-4 d-block mb-1"></i> IMAGEM 16:9</span>
+            <span class="badge bg-azul position-absolute top-0 end-0 m-3">Presencial</span>
+          </div>
+          <div class="card-body d-flex flex-column p-3">
+            <small class="text-muted mb-2"><i class="bi bi-calendar3 me-1"></i> Qui, 26 nov 2026 - 19:00</small>
+            <h6 class="card-title fw-bold text-navy mb-2">Meetup Front-end Recife</h6>
+            <p class="card-text text-secondary small flex-grow-1 mb-3">Networking e palestras sobre ecossistema moderno web.</p>
+            <div class="d-flex align-items-center justify-content-between pt-2 border-top">
+              <span class="small text-muted"><i class="bi bi-geo-alt me-1"></i> Recife, PE</span>
+              <a href="detalhes.html" class="link-primary text-decoration-none fw-semibold small">Ver detalhes <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xl-3 col-lg-4 col-md-6 card-item" data-category="workshop" data-modalidade="hibrido" data-keywords="seminário cloud devops curitiba pr híbrido">
+        <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden card-hover bg-white">
+          <div class="bg-light-blue p-4 text-center position-relative" style="height: 140px; display: flex; align-items: center; justify-content: center;">
+            <span class="badge bg-secondary position-absolute top-0 start-0 m-3 fw-normal">Workshops</span>
+            <span class="text-muted small"><i class="bi bi-image fs-4 d-block mb-1"></i> IMAGEM 16:9</span>
+            <span class="badge bg-warning text-dark position-absolute top-0 end-0 m-3">Híbrido</span>
+          </div>
+          <div class="card-body d-flex flex-column p-3">
+            <small class="text-muted mb-2"><i class="bi bi-calendar3 me-1"></i> Sáb, 28 nov 2026 - 14:00</small>
+            <h6 class="card-title fw-bold text-navy mb-2">Seminário Cloud & DevOps</h6>
+            <p class="card-text text-secondary small flex-grow-1 mb-3">Boas práticas em infraestrutura ágil e Docker.</p>
+            <div class="d-flex align-items-center justify-content-between pt-2 border-top">
+              <span class="small text-muted"><i class="bi bi-geo-alt me-1"></i> Curitiba, PR</span>
+              <a href="detalhes.html" class="link-primary text-decoration-none fw-semibold small">Ver detalhes <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xl-3 col-lg-4 col-md-6 card-item" data-category="conferencia" data-modalidade="hibrido" data-keywords="conferência brasileira inteligência artificial aplicada belo horizonte mg híbrido">
+        <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden card-hover bg-white">
+          <div class="bg-light-blue p-4 text-center position-relative" style="height: 140px; display: flex; align-items: center; justify-content: center;">
+            <span class="badge bg-secondary position-absolute top-0 start-0 m-3 fw-normal">Conferências</span>
+            <span class="text-muted small"><i class="bi bi-image fs-4 d-block mb-1"></i> IMAGEM 16:9</span>
+            <span class="badge bg-warning text-dark position-absolute top-0 end-0 m-3">Híbrido</span>
+          </div>
+          <div class="card-body d-flex flex-column p-3">
+            <small class="text-muted mb-2"><i class="bi bi-calendar3 me-1"></i> 01 - 03 dez 2026</small>
+            <h6 class="card-title fw-bold text-navy mb-2">Conferência Brasileira de IA Aplicada</h6>
+            <p class="card-text text-secondary small flex-grow-1 mb-3">Cases de sucesso em IA generativa e machine learning.</p>
+            <div class="d-flex align-items-center justify-content-between pt-2 border-top">
+              <span class="small text-muted"><i class="bi bi-geo-alt me-1"></i> Belo Horizonte, MG</span>
+              <a href="detalhes.html" class="link-primary text-decoration-none fw-semibold small">Ver detalhes <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xl-3 col-lg-4 col-md-6 card-item" data-category="meetup" data-modalidade="presencial" data-keywords="meetup comunidade python florianópolis sc presencial">
+        <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden card-hover bg-white">
+          <div class="bg-light-blue p-4 text-center position-relative" style="height: 140px; display: flex; align-items: center; justify-content: center;">
+            <span class="badge bg-secondary position-absolute top-0 start-0 m-3 fw-normal">Meetups</span>
+            <span class="text-muted small"><i class="bi bi-image fs-4 d-block mb-1"></i> IMAGEM 16:9</span>
+            <span class="badge bg-azul position-absolute top-0 end-0 m-3">Presencial</span>
+          </div>
+          <div class="card-body d-flex flex-column p-3">
+            <small class="text-muted mb-2"><i class="bi bi-calendar3 me-1"></i> Qua, 09 dez 2026 - 19:00</small>
+            <h6 class="card-title fw-bold text-navy mb-2">Meetup Comunidade Python Floripa</h6>
+            <p class="card-text text-secondary small flex-grow-1 mb-3">Encontro mensal com palestras relâmpago e networking.</p>
+            <div class="d-flex align-items-center justify-content-between pt-2 border-top">
+              <span class="small text-muted"><i class="bi bi-geo-alt me-1"></i> Florianópolis, SC</span>
+              <a href="detalhes.html" class="link-primary text-decoration-none fw-semibold small">Ver detalhes <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xl-3 col-lg-4 col-md-6 card-item" data-category="hackathon" data-modalidade="online" data-keywords="hackathon saúde digital online">
+        <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden card-hover bg-white">
+          <div class="bg-light-blue p-4 text-center position-relative" style="height: 140px; display: flex; align-items: center; justify-content: center;">
+            <span class="badge bg-secondary position-absolute top-0 start-0 m-3 fw-normal">Hackathons</span>
+            <span class="text-muted small"><i class="bi bi-image fs-4 d-block mb-1"></i> IMAGEM 16:9</span>
+            <span class="badge bg-success position-absolute top-0 end-0 m-3">Online</span>
+          </div>
+          <div class="card-body d-flex flex-column p-3">
+            <small class="text-muted mb-2"><i class="bi bi-calendar3 me-1"></i> 10 - 13 dez 2026</small>
+            <h6 class="card-title fw-bold text-navy mb-2">Hackathon Saúde Digital</h6>
+            <p class="card-text text-secondary small flex-grow-1 mb-3">Inovação e telemedicina em maratona de 72 horas online.</p>
+            <div class="d-flex align-items-center justify-content-between pt-2 border-top">
+              <span class="small text-muted"><i class="bi bi-globe me-1"></i> Online</span>
+              <a href="detalhes.html" class="link-primary text-decoration-none fw-semibold small">Ver detalhes <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xl-3 col-lg-4 col-md-6 card-item" data-category="workshop" data-modalidade="online" data-keywords="workshop ux para desenvolvedores online">
+        <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden card-hover bg-white">
+          <div class="bg-light-blue p-4 text-center position-relative" style="height: 140px; display: flex; align-items: center; justify-content: center;">
+            <span class="badge bg-secondary position-absolute top-0 start-0 m-3 fw-normal">Workshops</span>
+            <span class="text-muted small"><i class="bi bi-image fs-4 d-block mb-1"></i> IMAGEM 16:9</span>
+            <span class="badge bg-success position-absolute top-0 end-0 m-3">Online</span>
+          </div>
+          <div class="card-body d-flex flex-column p-3">
+            <small class="text-muted mb-2"><i class="bi bi-calendar3 me-1"></i> Sex, 15 jan 2027 - 19:00</small>
+            <h6 class="card-title fw-bold text-navy mb-2">Workshop de UX para Desenvolvedores</h6>
+            <p class="card-text text-secondary small flex-grow-1 mb-3">Melhore a usabilidade das suas aplicações front-end.</p>
+            <div class="d-flex align-items-center justify-content-between pt-2 border-top">
+              <span class="small text-muted"><i class="bi bi-globe me-1"></i> Online</span>
+              <a href="detalhes.html" class="link-primary text-decoration-none fw-semibold small">Ver detalhes <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xl-3 col-lg-4 col-md-6 card-item" data-category="conferencia" data-modalidade="presencial" data-keywords="congresso nacional engenharia de software brasília df presencial">
+        <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden card-hover bg-white">
+          <div class="bg-light-blue p-4 text-center position-relative" style="height: 140px; display: flex; align-items: center; justify-content: center;">
+            <span class="badge bg-secondary position-absolute top-0 start-0 m-3 fw-normal">Conferências</span>
+            <span class="text-muted small"><i class="bi bi-image fs-4 d-block mb-1"></i> IMAGEM 16:9</span>
+            <span class="badge bg-azul position-absolute top-0 end-0 m-3">Presencial</span>
+          </div>
+          <div class="card-body d-flex flex-column p-3">
+            <small class="text-muted mb-2"><i class="bi bi-calendar3 me-1"></i> 03 - 05 fev 2027</small>
+            <h6 class="card-title fw-bold text-navy mb-2">Congresso Nacional de Engenharia de Software</h6>
+            <p class="card-text text-secondary small flex-grow-1 mb-3">Artigos científicos e palestras magnas da indústria.</p>
+            <div class="d-flex align-items-center justify-content-between pt-2 border-top">
+              <span class="small text-muted"><i class="bi bi-geo-alt me-1"></i> Brasília, DF</span>
+              <a href="detalhes.html" class="link-primary text-decoration-none fw-semibold small">Ver detalhes <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
   </main>
 
   <footer class="container-fluid bg-dark p-4 text-light">
@@ -160,5 +447,99 @@
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous"
   ></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const inputBusca = document.getElementById("inputBusca");
+        const selectOrdenacao = document.getElementById("selectOrdenacao");
+        const containerLista = document.getElementById("listaEventos");
+        const contadorResultados = document.getElementById("contadorResultados");
+        const cards = document.querySelectorAll(".card-item");
+
+        let categoriaAtiva = "all";
+        let modalidadeAtiva = "all";
+
+        function atualizarContador(visiveis) {
+            if (contadorResultados) {
+                contadorResultados.textContent = `${visiveis} evento${visiveis === 1 ? '' : 's'} · ordenados pela data mais próxima`;
+            }
+        }
+
+        function aplicarFiltros() {
+            const termoBusca = inputBusca ? inputBusca.value.toLowerCase().trim() : "";
+            let contadorVisiveis = 0;
+
+            cards.forEach(card => {
+                const cat = card.getAttribute("data-category") || "";
+                const mod = card.getAttribute("data-modalidade") || "";
+                const key = card.getAttribute("data-keywords") || "";
+                
+                const tituloEl = card.querySelector(".card-title");
+                const descEl = card.querySelector(".card-text");
+                const titulo = tituloEl ? tituloEl.textContent.toLowerCase() : "";
+                const desc = descEl ? descEl.textContent.toLowerCase() : "";
+
+                const matchCategoria = (categoriaAtiva === "all" || cat === categoriaAtiva);
+                const matchModalidade = (modalidadeAtiva === "all" || mod === modalidadeAtiva);
+                const matchBusca = (termoBusca === "" || key.includes(termoBusca) || titulo.includes(termoBusca) || desc.includes(termoBusca));
+
+                if (matchCategoria && matchModalidade && matchBusca) {
+                    card.style.display = "block";
+                    contadorVisiveis++;
+                } else {
+                    card.style.display = "none";
+                }
+            });
+
+            atualizarContador(contadorVisiveis);
+        }
+
+        const botoesCat = document.querySelectorAll("#filtroCategorias button");
+        botoesCat.forEach(btn => {
+            btn.addEventListener("click", function (e) {
+                e.preventDefault();
+                botoesCat.forEach(b => b.classList.remove("active"));
+                this.classList.add("active");
+                categoriaAtiva = this.getAttribute("data-filter") || "all";
+                aplicarFiltros();
+            });
+        });
+
+        const botoesMod = document.querySelectorAll("#filtroModalidade button");
+        botoesMod.forEach(btn => {
+            btn.addEventListener("click", function (e) {
+                e.preventDefault();
+                botoesMod.forEach(b => b.classList.remove("active"));
+                this.classList.add("active");
+                modalidadeAtiva = this.getAttribute("data-mod") || "all";
+                aplicarFiltros();
+            });
+        });
+
+        if (inputBusca) {
+            inputBusca.addEventListener("input", aplicarFiltros);
+            inputBusca.addEventListener("keyup", aplicarFiltros);
+        }
+
+        if (selectOrdenacao && containerLista) {
+            selectOrdenacao.addEventListener("change", function () {
+                const opcao = this.value;
+                const arrayCards = Array.from(cards);
+
+                if (opcao === "alfabetica") {
+                    arrayCards.sort((a, b) => {
+                        const tA = a.querySelector(".card-title").textContent.trim();
+                        const tB = b.querySelector(".card-title").textContent.trim();
+                        return tA.localeCompare(tB);
+                    });
+                }
+
+                arrayCards.forEach(card => containerLista.appendChild(card));
+            });
+        }
+
+        aplicarFiltros();
+    });
+  </script>
 </body>
 </html>

@@ -6,7 +6,8 @@ só lugar. Projeto acadêmico, protótipo apenas de front-end, com dados
 demonstrativos.
 
 > Projeto Integrador da disciplina de Desenvolvimento Front-end para Web —
-> Centro Universitário de João Pessoa. Professora: Karine Heloise.
+> Centro Universitário de João Pessoa.
+> Professora: Karine Heloise.
 
 ## Sobre o projeto
 

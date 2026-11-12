@@ -1,8 +1,3 @@
-/*
-  Seção: Contato
-  Autor: Renan Santos
-*/
-
 const form = document.getElementById('formContato');
 const alerta = document.getElementById('alertaContato');
 const alertaTexto = document.getElementById('alertaContatoTexto');

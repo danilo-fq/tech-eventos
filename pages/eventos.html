@@ -397,12 +397,12 @@
         <h3 class="text-light">Categorias</h3>
         <nav>
           <ul class="list-unstyled">
-            <li><a href="">Conferências</a></li>
-            <li><a href="">Workshops</a></li>
-            <li><a href="">Palestras</a></li>
-            <li><a href="">Hakathons</a></li>
-            <li><a href="">Meetups</a></li>
-            <li><a href="">Acadêmicos</a></li>
+            <li><a href="./eventos.html?categoria=conferencia">Conferências</a></li>
+            <li><a href="./eventos.html?categoria=workshop">Workshops</a></li>
+            <li><a href="./eventos.html?categoria=palestra">Palestras</a></li>
+            <li><a href="./eventos.html?categoria=hackathon">Hackathons</a></li>
+            <li><a href="./eventos.html?categoria=meetup">Meetups</a></li>
+            <li><a href="./eventos.html?categoria=academico">Acadêmicos</a></li>
           </ul>
         </nav>
       </div>
@@ -525,6 +525,22 @@
 
                 arrayCards.forEach(card => containerLista.appendChild(card));
             });
+        }
+
+        // Lê a categoria da URL (ex.: eventos.html?categoria=hackathon)
+        const params = new URLSearchParams(window.location.search);
+        const categoriaUrl = params.get("categoria");
+
+        if (categoriaUrl) {
+          categoriaAtiva = categoriaUrl; // já começa filtrado por essa categoria
+
+          // marca o botão certo como ativo
+          botoesCat.forEach(b => {
+            b.classList.remove("active");
+            if (b.getAttribute("data-filter") === categoriaUrl) {
+              b.classList.add("active");
+            }
+          });
         }
 
         aplicarFiltros();

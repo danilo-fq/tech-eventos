@@ -482,7 +482,7 @@
             atualizarContador(contadorVisiveis);
         }
 
-        // Atualiza a URL com os filtros ativos, sem recarregar a página
+
         function atualizarURL() {
             const params = new URLSearchParams();
             if (categoriaAtiva !== "all") params.set("categoria", categoriaAtiva);
@@ -530,11 +530,11 @@
                     const tB = b.querySelector(".card-title").textContent.trim();
                     return tA.localeCompare(tB);
                 });
-            } else { // "proximos" (padrão): ordena por data de início crescente
+            } else {
                 arrayCards.sort((a, b) => {
                     const dA = a.getAttribute("data-data") || "";
                     const dB = b.getAttribute("data-data") || "";
-                    return dA.localeCompare(dB); // datas ISO AAAA-MM-DD ordenam corretamente como texto
+                    return dA.localeCompare(dB);
                 });
             }
             arrayCards.forEach(card => containerLista.appendChild(card));
@@ -546,15 +546,13 @@
             });
         }
 
-        // Lê os filtros da URL (ex.: eventos.html?categoria=hackathon&modalidade=online)
         const params = new URLSearchParams(window.location.search);
         const categoriaUrl = params.get("categoria");
         const modalidadeUrl = params.get("modalidade");
 
         if (categoriaUrl) {
-          categoriaAtiva = categoriaUrl; // já começa filtrado por essa categoria
+          categoriaAtiva = categoriaUrl;
 
-          // marca o botão de categoria certo como ativo
           botoesCat.forEach(b => {
             b.classList.remove("active");
             if (b.getAttribute("data-filter") === categoriaUrl) {
@@ -564,9 +562,8 @@
         }
 
         if (modalidadeUrl) {
-          modalidadeAtiva = modalidadeUrl; // já começa filtrado por essa modalidade
+          modalidadeAtiva = modalidadeUrl;
 
-          // marca o botão de modalidade certo como ativo
           botoesMod.forEach(b => {
             b.classList.remove("active");
             if (b.getAttribute("data-mod") === modalidadeUrl) {
@@ -575,7 +572,6 @@
           });
         }
 
-        // Abre a lista já ordenada por "Mais próximos" (padrão)
         ordenarEventos("proximos");
 
         aplicarFiltros();
